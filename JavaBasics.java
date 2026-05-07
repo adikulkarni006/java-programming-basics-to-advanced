@@ -662,3 +662,104 @@
 //         }
 //     }
 // }
+
+// ========================================
+// *FUNCTIONS / METHODS IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void printHelloWorld() {
+//         System.out.println("HELLO WORLD!!");
+//         System.out.println("WELCOME TO JAVA PROGRAMMING!!");
+//         System.out.println("HAVE A NICE DAY!!");
+//     }
+
+//     public static void main(String args[]) {
+//         printHelloWorld();      //*function call*
+
+//     }
+// }
+
+// ========================================
+// *PRODUCT OF A & B IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static int product(int a, int b) {
+//         int product = a * b;
+//         return product;
+//     }
+
+//     public static void main(String args[]) {
+//         int a = 10;
+//         int b = 20;
+//         int result = product(a, b);
+//         System.out.println("PRODUCT = " + result);
+//     }
+// }
+
+// ========================================
+// *FUNCTION TO CALC SUM OF TWO & THREE NUMBERS IN JAVA*
+// ========================================
+
+// public static int sum(int a, int b) {
+//     return a + b;
+// }
+
+// public static int sum(int a, int b, int c) {
+//     return a + b + c;
+// }
+//     public static void main(String args[]) {
+//         int result1 = sum(10, 20);
+//         int result2 = sum(10, 20, 30);
+//         System.out.println("SUM OF TWO NUMBERS = " + result1);
+//         System.out.println("SUM OF THREE NUMBERS = " + result2);
+//     }
+
+// ========================================
+// *BINARY TO DECIMAL CONVERSIONIN JAVA*
+// ========================================
+
+// public static void binaryToDecimal(int binNum) {
+//     int myNum = binNum;
+//     int pow = 0;
+//     int decNum = 1;
+
+//     while (binNum > 0) {
+//         int lastDigit = binNum % 10;
+//         decNum = decNum + (lastDigit * (int)Math.pow(2, pow));
+
+//         pow++;
+//         binNum = binNum /10;
+//     }
+
+//     System.out.println("DECIMAL OF " +  myNum +" = " + decNum);
+// }
+
+// public static void main(String args[]) {
+//     binaryToDecimal(10100);
+// }
+
+// ========================================
+// *DECIMAL TO BINARY CONVERSION IN JAVA*
+// ========================================
+
+// public static void decimalToBinary(int decNum) {
+//     int myNum = decNum;
+//     int pow = 0;
+//     int binNum = 0;
+
+//     while (decNum > 0) {
+//         int rem = decNum % 2;
+//         binNum = binNum + (rem * (int)Math.pow(10, pow));
+
+//         pow++;
+//         decNum = decNum / 2;
+//     }
+
+//     System.out.println("BINARY OF " + myNum + " = " + binNum);
+// }
+
+// public static void main(String args[]) {
+//     decimalToBinary(5);
+// }
