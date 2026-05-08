@@ -763,3 +763,248 @@
 // public static void main(String args[]) {
 //     decimalToBinary(5);
 // }
+
+// ========================================
+// *HOLLOW RECTANGLE PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+// public static void hollow_rectangle(int toRows, int totCols) {
+// //*OUTER LOOP FOR ROWS>>>>>*
+//     for (int i = 1; i<= toRows; i++) {
+// //*INNER LOOP FOR COLUMNS>>>>>*
+//         for (int j = 1; j <= totCols; j++) {
+// //*CELL (i, j)>>>>>>*
+//             if (i == 1 || i == toRows || j == 1 || j == totCols) {
+// //*BOUNDARY CELLS>>>>>>*
+//                 System.out.print("*");
+//             }
+//             else {
+//                 System.out.print(" ");
+//             }
+//         }
+//         System.out.println("");
+//     }
+// }
+
+// public static void main(String args[]) {
+//     hollow_rectangle(4, 5);
+// }
+// }
+
+// ========================================
+// *INVERTED & ROATED HALF-PYRAMID PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void inverted_half_pyramid(int n) {
+// //*OUTER LOOP FOR LINES>>>>>*
+//         for (int i = 1; i <= n; i++) {
+// //*SPACES*
+//             for (int j = 1; j <= n - i; j++) {
+//                 System.out.print(" ");
+//             }
+// //*STARS*
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println("");
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         inverted_half_pyramid(5);
+//     }
+// }
+
+// ========================================
+// *INVERTED HALF PYRAMID WITH NUMBERS IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void inverted_half_pyramid_with_numbers(int n) {
+//         for(int i=1; i<=n; i++) {
+// //*INNNER NUMBER LOOP*
+//             for (int j=1; j<=n-i+1; j++) {
+//                 System.out.print(j+" ");
+//             }
+//             System.out.println("");
+//         }
+//     }
+
+//         public static void main(String args[]) {
+//             inverted_half_pyramid_with_numbers(5);
+//         }
+//     }
+
+// ========================================
+// *FLOYDS TRIANGLE PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void floyds_triangle(int n) {
+// //*OUTER*
+//         int counter = 1;
+//         for(int i=1; i<=n; i++) {
+// //*INNER HOW MANY TIMES WILL COUNTER BE PRINTED*
+//             for(int j=1; j<=i; j++) {
+//             System.out.print(counter+" ");
+//             counter++;
+//         }
+//         System.out.println();
+//     }
+// }
+
+// public static void main(String args[]) {
+//     floyds_triangle(10);
+// }
+// }
+
+// ========================================
+// *0 - 1 TRIANGLE PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void zero_one_triangle(int n) {
+//         for (int i=1; i<=n; i++) {
+//             for (int j=1; j<=i; j++) {
+//                 if ((i+j) % 2 == 0) {
+//                     System.out.print("1 ");
+//                 }
+//                 else {
+//                     System.out.print("0 ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         zero_one_triangle(5);
+//     }
+// }
+
+// ========================================
+// *BUTTERFLY PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void butterfly_pattern(int n) {
+// //*1ST HALF OF BUTTERFLY*
+//         for (int i=1; i<=n; i++) {
+// //*STARS - i*
+//             for (int j=1; j<=i; j++) {
+//                 System.out.print("*");
+//             }
+// //*SPACES - 2*(n-i)*
+//             for (int j=1; j<=2*(n-i); j++) {
+//                 System.out.print(" ");
+//             }
+// //*STARS - i*
+//             for (int j=1; j<=i; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+// //*2ND HALF OF BUTTERFLY*
+//         for (int i=n; i>=1; i--) {
+//             for (int j=1; j<=i; j++) {
+//                 System.out.print("*");
+//             }
+// //*SPACES - 2*(n-i)*
+//             for (int j=1; j<=2*(n-i); j++) {
+//                 System.out.print(" ");
+//             }
+// //*STARS - i*
+//             for (int j=1; j<=i; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         butterfly_pattern(4);
+//     }
+// }
+
+// ========================================
+// *SOLID RHOMBUS PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void solid_rhombus(int n) {
+//         for (int i=1; i<=n; i++) {
+//             for (int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int j=1; j<=n; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         solid_rhombus(5);
+//     }
+// }
+
+// ========================================
+// *HOLLOW RHOMBUS PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void hollow_rhombus(int n) {
+//         for (int i=1; i<=n; i++) {
+//             for (int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int j=1; j<=n; j++) {
+//                 if (i == 1 || i == n || j == 1 || j == n) {
+//                     System.out.print("*");
+//                 }
+//                 else {
+//                     System.out.print(" ");
+//                 }
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         hollow_rhombus(5);
+//     }
+
+// }
+
+// ========================================
+// *DIAMOND PATTERN IN JAVA*
+// ========================================
+
+// public class JavaBasics {
+//     public static void diamond_pattern(int n) {
+//         for (int i=1; i<=n; i++) {
+//             for (int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int j=1; j<=2*i-1; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//         for (int i=n; i>=1; i--) {
+//             for (int j=1; j<=n-i; j++) {
+//                 System.out.print(" ");
+//             }
+//             for (int j=1; j<=2*i-1; j++) {
+//                 System.out.print("*");
+//             }
+//             System.out.println();
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         diamond_pattern(5);
+//     }
+// }
