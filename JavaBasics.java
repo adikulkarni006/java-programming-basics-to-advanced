@@ -1008,3 +1008,118 @@
 //         diamond_pattern(5);
 //     }
 // }
+
+// ========================================
+// *ARRAYS IN JAVA*
+// ========================================
+
+// import java.util.*;
+
+// public class JavaBasics {
+//     public static void main(String args[]) {
+//         int marks[] = new int[100];
+
+//         Scanner sc = new Scanner(System.in);
+
+//             marks[0] = sc.nextInt();
+//             marks[1] = sc.nextInt();
+//             marks[2] = sc.nextInt();
+
+//             System.out.println("phy : " + marks[0]);
+//             System.out.println("chem : " + marks[1]);
+//             System.out.println("maths : " + marks[2]);
+
+//             int percentage = (marks[0] + marks[1] + marks[2]) / 3;
+//             System.out.println("percentage : " + percentage + "%");
+//     }
+// }
+
+// ========================================
+// *ARRAYS AS A FUNCTION ARGUMENTS IN JAVA*
+// ========================================
+
+// import java.util.*;
+
+// public class JavaBasics {
+//     public static void update(int marks[]) {
+//         for (int i=0; i<marks.length; i++) {
+//             marks[i] = marks[i] + 1;
+//         }
+//     }
+
+//     public static void main(String args[]) {
+//         int marks[] = {97, 98, 95, 100, 93};
+//         update(marks);
+
+//         //*PRINT UPDATED MARKS*
+//         for (int i=0; i<marks.length; i++) {
+//             System.out.print(marks[i] + " ");
+//         }
+//         System.out.println();
+//     }
+
+// }
+
+// ========================================
+// *LARGEST/SMALLEST NUMBER IN ARRAY IN JAVA*
+// ========================================
+
+// import java.util.*;
+
+// public class JavaBasics {
+
+//     public static int update(int number[]) {
+//         int largest = Integer.MIN_VALUE;
+//         int smallest = Integer.MAX_VALUE;
+
+//         for (int i = 0; i < number.length; i++) {
+
+//             if (largest < number[i]) {
+//                 largest = number[i];
+//             }
+
+//             if (smallest > number[i]) {
+//                 smallest = number[i];
+//             }
+//         }
+
+//         System.out.println("Smallest NUMBER = " + smallest);
+
+//         return largest;
+//     }
+
+//     public static void main(String args[]) {
+
+//         int number[] = {10, 5, 20, 15, 8};
+
+//         int largest = update(number);
+
+//         System.out.println("Largest NUMBER = " + largest);
+//     }
+// }
+
+// ========================================
+// *PAIRS IN ARRAY IN JAVA*
+// ========================================
+
+import java.util.*;
+
+public class JavaBasics {
+    public static void printPairs(int number[]) {
+        int totalPairs = 0;
+        for (int i=0; i<number.length; i++) {
+            int current = number[i];//*10, 20, 30, 40, 50*
+            for (int j=i+1; j<number.length; j++) {
+                System.out.print("(" + current + ", " + number[j] + ") ");
+                totalPairs++;
+            }
+            System.out.println();
+        }
+        System.out.println("Total pairs: " + totalPairs);
+    }
+
+    public static void main(String args[]) {
+        int number[] = {10, 20, 30, 40, 50};
+        printPairs(number);
+    }
+}
