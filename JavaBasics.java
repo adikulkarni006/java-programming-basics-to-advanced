@@ -1102,24 +1102,119 @@
 // *PAIRS IN ARRAY IN JAVA*
 // ========================================
 
+// import java.util.*;
+
+// public class JavaBasics {
+//     public static void printPairs(int number[]) {
+//         int totalPairs = 0;
+//         for (int i=0; i<number.length; i++) {
+//             int current = number[i];//*10, 20, 30, 40, 50*
+//             for (int j=i+1; j<number.length; j++) {
+//                 System.out.print("(" + current + ", " + number[j] + ") ");
+//                 totalPairs++;
+//             }
+//             System.out.println();
+//         }
+//         System.out.println("Total pairs: " + totalPairs);
+//     }
+
+//     public static void main(String args[]) {
+//         int number[] = {10, 20, 30, 40, 50};
+//         printPairs(number);
+//     }
+// }
+
+// ========================================
+// *MAX SUBARRAY SUM KADANE'S ALGORITHM IN JAVA*
+// ========================================
+
+// import java.util.*;
+
+// public class JavaBasics {
+//     public static void kadane(int numbers[] ) {
+//         int ms = Integer.MIN_VALUE;
+//         int cs = 0;
+
+//         for (int i=0; i<numbers.length; i++) {
+//             cs = cs + numbers[i];
+//             if (cs < 0) {
+//                 cs = 0;
+//             }
+//             ms = Math.max(ms, cs);
+//         }
+//         System.out.println("our max subarray sum is: " + ms);
+//     }
+
+//     public static void main (String args[]) {
+//         int numbers[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+//         kadane(numbers);
+//     }
+// }
+
+// ========================================
+// *TRAPPING RAINWATER IN JAVA*
+// ========================================
+
+// import java.util.*;
+
+// public class JavaBasics {
+//     public static int trappedRainwater(int height[]) {
+//         int n = height.length;
+//         //*LEFT MAX BOUNDARY ARRAY*
+//         int leftMax[] = new int[n];
+//         leftMax[0] = height[0];
+//         for (int i=1; i<n; i++) {
+//             leftMax[i] = Math.max(height[i], leftMax[i-1]);
+//         }
+
+//         //*RIGHT MAX BOUNDARY ARRAY*
+//         int rightMax[] = new int[n];
+//         rightMax[n-1] = height[n-1];
+//         for (int i=n-2; i>=0; i--) {
+//             rightMax[i] = Math.max(height[i], rightMax[i+1]);
+//         }
+
+//         int trappedWater = 0;
+//         //*LOOP*
+//         for (int i=0; i<n; i++) {
+//             int waterLevel = Math.min(leftMax[i], rightMax[i]);
+//             trappedWater += waterLevel - height[i];
+//         }
+//         return trappedWater;
+//     }
+//     public static void main(String args[]) {
+//         int height[] = {4, 2, 0, 6, 3, 2, 5};
+
+//         System.out.println("Trapped Rainwater: " + trappedRainwater(height));
+//     }
+// }
+
+// ========================================
+// *BUY & SELL STOCK IN JAVA*
+// ========================================
+
 import java.util.*;
 
 public class JavaBasics {
-    public static void printPairs(int number[]) {
-        int totalPairs = 0;
-        for (int i=0; i<number.length; i++) {
-            int current = number[i];//*10, 20, 30, 40, 50*
-            for (int j=i+1; j<number.length; j++) {
-                System.out.print("(" + current + ", " + number[j] + ") ");
-                totalPairs++;
+    public static int buyAndSellStock(int prices[]) {
+        int buyPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int i=0; i<prices.length; i++) {
+            if (buyPrice < prices[i]) {
+                int profit = prices[i] - buyPrice;
+                maxProfit = Math.max(maxProfit, profit);
             }
-            System.out.println();
+            else {
+                buyPrice = prices[i];
+            }
         }
-        System.out.println("Total pairs: " + totalPairs);
+        return maxProfit;
     }
 
     public static void main(String args[]) {
-        int number[] = {10, 20, 30, 40, 50};
-        printPairs(number);
+        int prices[] = {7, 1, 5, 3, 6, 4};
+
+        System.out.println("Maximum Profit: " + buyAndSellStock(prices));
     }
 }
